@@ -1,6 +1,30 @@
 function minDate(dates) {
   //write you code here
+	function minDate(dates) {
+    let minDate = null;
+
+    dates.forEach(date => {
+        let [year, month, day] = date.split("/");
+        if (!isNaN(Date.parse(year, month - 1, day))) {
+            let currentDate = new Date(year, month - 1, day);
+            if (minDate === null || currentDate < minDate) {
+                minDate = currentDate;
+            }
+        }
+    });
+
+    if (minDate === null) {
+        return "No valid dates provided";
+    } else {
+        let year = minDate.getFullYear();
+        let month = minDate.getMonth() + 1;
+        let day = minDate.getDate();
+
+        return `${year}/${month}/${day}`;
+    }
 }
+}
+
 
 // Do not change the code
 
