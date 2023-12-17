@@ -1,6 +1,5 @@
 function minDate(dates) {
   //write you code here
-	function minDate(dates) {
     let minDate = null;
 
     dates.forEach(date => {
@@ -23,7 +22,7 @@ function minDate(dates) {
         return `${year}/${month}/${day}`;
     }
 }
-}
+
 
 
 // Do not change the code
